@@ -1,0 +1,45 @@
+package pckUCFIBConn;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'User Control FIB Connector'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  vcldb,
+  vcl,
+  dsnap,
+  VclSmp,
+  vclx,
+  vclactnband,
+  inet,
+  pckUCDataConnector_DXE,
+  FIBPlusXE;
+
+contains
+  UCFIBConn in 'UCFIBConn.pas',
+  UCFIBConnReg in 'UCFIBConnReg.pas';
+
+end.

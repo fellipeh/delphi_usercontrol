@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B984909C-9AB7-4C4F-9FB0-D0713A0ED99B}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="pckUCDataConnector_DXE.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="pckUserControl_DTXE.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="pckUserControl_RTXE.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="pckUCDataConnector_DXE">
+			<MSBuild Projects="pckUCDataConnector_DXE.dproj"/>
+		</Target>
+		<Target Name="pckUCDataConnector_DXE:Clean">
+			<MSBuild Projects="pckUCDataConnector_DXE.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pckUCDataConnector_DXE:Make">
+			<MSBuild Projects="pckUCDataConnector_DXE.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="pckUserControl_DTXE">
+			<MSBuild Projects="pckUserControl_DTXE.dproj"/>
+		</Target>
+		<Target Name="pckUserControl_DTXE:Clean">
+			<MSBuild Projects="pckUserControl_DTXE.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pckUserControl_DTXE:Make">
+			<MSBuild Projects="pckUserControl_DTXE.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="pckUserControl_RTXE">
+			<MSBuild Projects="pckUserControl_RTXE.dproj"/>
+		</Target>
+		<Target Name="pckUserControl_RTXE:Clean">
+			<MSBuild Projects="pckUserControl_RTXE.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pckUserControl_RTXE:Make">
+			<MSBuild Projects="pckUserControl_RTXE.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="pckUCDataConnector_DXE;pckUserControl_DTXE;pckUserControl_RTXE"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="pckUCDataConnector_DXE:Clean;pckUserControl_DTXE:Clean;pckUserControl_RTXE:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="pckUCDataConnector_DXE:Make;pckUserControl_DTXE:Make;pckUserControl_RTXE:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

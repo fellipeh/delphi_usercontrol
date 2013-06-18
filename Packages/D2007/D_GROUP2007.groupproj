@@ -1,0 +1,54 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{1c592c69-53bd-49f1-a789-a4ac64f25b09}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="pkgDataConnector_D11.dproj" />
+    <Projects Include="pkgUserControl_DT11.dproj" />
+    <Projects Include="pkgUserControl_RT11.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject xmlns=""><Default.Personality></Default.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="pkgDataConnector_D11">
+    <MSBuild Projects="pkgDataConnector_D11.dproj" Targets="" />
+  </Target>
+  <Target Name="pkgDataConnector_D11:Clean">
+    <MSBuild Projects="pkgDataConnector_D11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="pkgDataConnector_D11:Make">
+    <MSBuild Projects="pkgDataConnector_D11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="pkgUserControl_RT11">
+    <MSBuild Projects="pkgUserControl_RT11.dproj" Targets="" />
+  </Target>
+  <Target Name="pkgUserControl_RT11:Clean">
+    <MSBuild Projects="pkgUserControl_RT11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="pkgUserControl_RT11:Make">
+    <MSBuild Projects="pkgUserControl_RT11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="pkgUserControl_DT11">
+    <MSBuild Projects="pkgUserControl_DT11.dproj" Targets="" />
+  </Target>
+  <Target Name="pkgUserControl_DT11:Clean">
+    <MSBuild Projects="pkgUserControl_DT11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="pkgUserControl_DT11:Make">
+    <MSBuild Projects="pkgUserControl_DT11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="pkgDataConnector_D11;pkgUserControl_RT11;pkgUserControl_DT11" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="pkgDataConnector_D11:Clean;pkgUserControl_RT11:Clean;pkgUserControl_DT11:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="pkgDataConnector_D11:Make;pkgUserControl_RT11:Make;pkgUserControl_DT11:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

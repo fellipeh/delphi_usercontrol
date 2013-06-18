@@ -1,0 +1,46 @@
+package pckHistorico;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'UserControl Historico'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  dbrtl,
+  vcl,
+  vclactnband,
+  vcldb,
+  VclSmp,
+  pckUCDataConnector,
+  pckUserControl_RT,
+  vclx,
+  vcljpg;
+
+contains
+  UCHist_Base in 'UCHist_Base.pas',
+  UCHistDataset in 'UCHistDataset.pas',
+  UCHist_Type in 'UCHist_Type.pas',
+  UCHist_Form in 'UCHist_Form.pas';
+
+end.

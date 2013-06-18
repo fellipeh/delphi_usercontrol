@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{0D757273-96DF-4466-824B-65764FBE91BB}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="pckUCDataConnector_D12.bpl">pckUCDataConnector_D12.bdsproj</Projects>
+      <Projects Name="pckUserControl_DT12.bpl">pckUserControl_DT12.bdsproj</Projects>
+      <Projects Name="pckUserControl_RT12.bpl">pckUserControl_RT12.bdsproj</Projects>
+      <Projects Name="Targets">pckUCDataConnector_D12.bpl pckUserControl_DT12.bpl pckUserControl_RT12.bpl</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

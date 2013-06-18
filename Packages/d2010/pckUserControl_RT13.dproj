@@ -1,0 +1,152 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0e9c6372-292f-47d7-b235-70ab25776f3b}</ProjectGuid>
+			<MainSource>pckUserControl_RT13.dpk</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\5.0\Bpl\pckUserControl_RT.bpl</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.0</ProjectVersion>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\7.0\Bpl\pckUserControl_RT13.bpl</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Description>User Control Package 2</DCC_Description>
+			<RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+			<DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+			<GenDll>true</GenDll>
+			<DesignOnlyPackage>false</DesignOnlyPackage>
+			<GenPackage>true</GenPackage>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_UNSAFE_TYPE>True</DCC_UNSAFE_TYPE>
+			<DCC_UNSAFE_CODE>True</DCC_UNSAFE_CODE>
+			<DCC_UNSAFE_CAST>True</DCC_UNSAFE_CAST>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<Version>7.0</Version>
+			<DCC_UNSAFE_TYPE>True</DCC_UNSAFE_TYPE>
+			<DCC_UNSAFE_CODE>True</DCC_UNSAFE_CODE>
+			<DCC_UNSAFE_CAST>True</DCC_UNSAFE_CAST>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>Package</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\pckUCDBXConn.bpl">User Control DBX Connectors</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\pckUserControl_DT.bpl">User Control Package 2</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\pckMyDacConn.bpl">UserControl MyDac Connector</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\Bin\DataSetManager105.bpl">Devart DataSet Manager</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">pckUserControl_RT13.dpk</Source>
+					</Source>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<ItemGroup>
+			<DelphiCompile Include="pckUserControl_RT13.dpk">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="pckUCDataConnector_d13.dcp"/>
+			<DCCReference Include="vcl.dcp"/>
+			<DCCReference Include="vclactnband.dcp"/>
+			<DCCReference Include="inet.dcp"/>
+			<DCCReference Include="vcldb.dcp"/>
+			<DCCReference Include="VclSmp.dcp"/>
+			<DCCReference Include="..\..\Source\TrocaSenha_U.pas"/>
+			<DCCReference Include="..\..\Source\UCBase.pas"/>
+			<DCCReference Include="..\..\Source\SenhaForm_U.pas"/>
+			<DCCReference Include="..\..\Source\EnvMsgForm_U.pas"/>
+			<DCCReference Include="..\..\Source\MsgRecForm_U.pas"/>
+			<DCCReference Include="..\..\Source\MsgsForm_U.pas"/>
+			<DCCReference Include="..\..\Source\UCDataInfo.pas"/>
+			<DCCReference Include="..\..\Source\UCMessages.pas"/>
+			<DCCReference Include="..\..\Source\UserPermis_U.pas"/>
+			<DCCReference Include="..\..\Source\UCSettings.pas"/>
+			<DCCReference Include="..\..\Source\LoginWindow_U.pas"/>
+			<DCCReference Include="..\..\Source\UcConsts_Language.pas"/>
+			<DCCReference Include="..\..\Source\pUCGeral.pas"/>
+			<DCCReference Include="..\..\Source\pUCFrame_User.pas"/>
+			<DCCReference Include="..\..\Source\pUCFrame_Profile.pas"/>
+			<DCCReference Include="..\..\Source\pUCFrame_Log.pas">
+				<Form>UCFrame_Log</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Source\pUcFrame_UserLogged.pas">
+				<Form>UCFrame_UsersLogged</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Source\UCMail.pas"/>
+			<DCCReference Include="..\..\Source\UCEMailForm_U.pas"/>
+			<DCCReference Include="..\..\Source\UCALSMTPClient.pas"/>
+			<DCCReference Include="..\..\Source\IncUser_U.pas"/>
+			<DCCReference Include="..\..\Source\IncPerfil_U.pas"/>
+			<DCCReference Include="..\..\Source\md5.pas"/>
+			<None Include="..\ModelSupport_pckUserControl_RT\default.txaPackage"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+	</Project>

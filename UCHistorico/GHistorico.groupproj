@@ -1,0 +1,31 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{db54d477-5fdc-4df2-8d4f-9ea1d372aaf4}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="pckHistorico">
+    <MSBuild Projects="pckHistorico.dproj" Targets="" />
+  </Target>
+  <Target Name="pckHistorico:Clean">
+    <MSBuild Projects="pckHistorico.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="pckHistorico:Make">
+    <MSBuild Projects="pckHistorico.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="pckHistorico" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="pckHistorico:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="pckHistorico:Make" />
+  </Target>
+</Project>
